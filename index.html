@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片展示页</title>
+    <style>
+        /* 基础样式，不用改 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { max-width: 1200px; margin: 0 auto; padding: 20px; font-family: 微软雅黑, sans-serif; }
+        h1 { text-align: center; margin: 20px 0; }
+        
+        /* 图片布局：手机/电脑都适配 */
+        .img-box { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; margin: 30px 0; }
+        .img-item { width: 100%; height: 120px; cursor: pointer; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 3px #eee; }
+        .img-item img { width: 100%; height: 100%; object-fit: cover; }
+        
+        /* 文本和下载按钮样式 */
+        .text-area { line-height: 1.8; font-size: 15px; color: #555; margin: 20px 0; }
+        .down-btn { display: block; width: 200px; margin: 0 auto; padding: 10px 0; background: #4285f4; color: white; text-align: center; text-decoration: none; border-radius: 5px; }
+        .down-btn:hover { background: #3367d6; }
+    </style>
+</head>
+<body>
+    <!-- 1. 页面标题：直接改文字 -->
+    <h1>黄油库资源图片</h1>
+
+    <!-- 2. 图片区：本地图片直接放网页同一文件夹，改文件名即可 -->
+    <div class="img-box">
+        <!-- 第1张图：改 src="1.jpg" 里的 "1.jpg" 为你的图片文件名 -->
+        <div class="img-item" onclick="goToDownload()"><img src="1.jpg" alt="图片1"></div>
+        <!-- 第2张图 -->
+        <div class="img-item" onclick="goToDownload()"><img src="2.jpg" alt="图片2"></div>
+        <!-- 第3张图 -->
+        <div class="img-item" onclick="goToDownload()"><img src="3.jpg" alt="图片3"></div>
+        <!-- 第4张图 -->
+        <div class="img-item" onclick="goToDownload()"><img src="4.jpg" alt="图片4"></div>
+        <!-- 第5张图 -->
+        <div class="img-item" onclick="goToDownload()"><img src="5.jpg" alt="图片5"></div>
+        <!-- 第6张图 -->
+        <div class="img-item" onclick="goToDownload()"><img src="6.jpg" alt="图片6"></div>
+        <!-- 第7张图 -->
+        <div class="img-item" onclick="goToDownload()"><img src="7.jpg" alt="图片7"></div>
+        <!-- 第8张图 -->
+        <div class="img-item" onclick="goToDownload()"><img src="8.jpg" alt="图片8"></div>
+        <!-- 第9张图 -->
+        <div class="img-item" onclick="goToDownload()"><img src="9.jpg" alt="图片9"></div>
+        <!-- 第10张图 -->
+        <div class="img-item" onclick="goToDownload()"><img src="10.jpg" alt="图片10"></div>
+    </div>
+
+    <!-- 3. 说明文本：已按链接内容优化，可直接用 -->
+    <div class="text-area">
+        这里是黄油库资源合集，包含上百款黄油免费玩！点击任意图片或下方按钮，即可跳转到下载页面
+    </div>
+
+    <!-- 4. 下载按钮：已替换为你的链接 -->
+    <a href="https://wwwd.qyshare.com:2999/s/iqnij4" class="down-btn" target="_blank">立即下载黄油库</a>
+
+
+    <!-- 关键：下载链接统一控制（已替换为你的链接，改一次全生效） -->
+    <script>
+        // 已替换为你的下载链接，点击任何图片都会跳转这里
+        function goToDownload() {
+            window.location.href = "https://wwwd.qyshare.com:2999/s/iqnij4";
+        }
+    </script>
+</body>
+</html>
